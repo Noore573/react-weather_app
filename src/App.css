@@ -1,38 +1,214 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.bebas-neue-regular {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Bebas Neue", sans-serif;
+}
+
+body {
+  /* font-family: "Outfit12"; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("bg2.jpg") no-repeat center center/cover;
+
+}
+
+p {
+  font-size: 3vw;
+}
+
+h1 {
+  font-size: 6vw;
+}
+
 .App {
-  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  /* background-color: green; */
+  background-color: rgba(0, 0, 0, 0.141);
+
+  color: white;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App::before {
+  content: "";
+
+  /* background-size: cover; */
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  /* background-repeat: no-repeat; */
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  /* background-color: red; */
+  max-width: 700px;
+  height:70%;
+  margin: auto;
+  /* padding: 0 1rem; */
+  position: relative;
+  top: 10%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.App .top {
+  width: 50%;
+  margin: 1rem auto;
+  /* background-color: green; */
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  gap: 5%;
+  align-items: center;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App .discrption {
+  /* position: relative;
+  right: -90%;
+  transform-origin: 0 0; */
+  /* transform: rotate(270deg); */
+}
+
+.App .bottom {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  width: 60vw;
+  padding:5% 0;
+  border-radius: 12px;
+  background: linear-gradient(to right, rgb(255, 255, 255, 0.2)60%, rgb(255, 255, 255, 0.2));
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.57);
+  backdrop-filter: blur(10px);
+  transition: 0.15s;
+  text-transform: uppercase;
+}
+
+.search {
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+
+}
+
+
+.search input {
+  padding: .7rem 1.5rem;
+  width: 40vw;
+  height: 5vh;
+  outline: none;
+  font-size:100%;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.292);
+  background: rgba(135, 135, 135, 0.274);
+  /* color: white; */
+  color:rgba(255, 255, 255, 0.923);
+  transition: transform 0.2s ease;
+
+}
+.search input:focus{
+  transform: scale(1.04);
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.559);
+}
+
+.first {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  align-items: center;
+  /* background-color: rgb(255, 255, 255,0.2); */
+  background: linear-gradient(to right, rgb(255, 255, 255, 0.2)60%, rgb(255, 255, 255, 0.2));
+  border-radius: 15px;
+  width: 60vw;
+  height: 40vh;
+  /* margin: 10px; */
+  padding: 10%;
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.57);
+  backdrop-filter: blur(10px);
+  transition: 0.15s;
+  text-transform: uppercase;
+  /* background-color: red; */
+
+}
+
+.first:hover,.App .bottom:hover,.discrption:hover {
+  scale: 1.04;
+}
+
+.discrption {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* width: 50vw;
+  height: 30vh;
+  padding: 10px; */
+  width: 60vw;
+  height: 40vh;
+  padding: 10%;
+  margin: 20px;
+  background: linear-gradient(to right, rgb(255, 255, 255, 0.2)60%, rgb(255, 255, 255, 0.2));
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.57);
+  backdrop-filter: blur(10px);
+  transition: 0.15s;
+  text-transform: uppercase;
+
+}
+
+.weatherimg {
+  margin: 4px;
+
+  width: 20vw;
+  height: 20vh;
+
+  background: url("cloudy.png") no-repeat center;
+  
+  /* background-size: 100%; */
+  background-size: contain;
+  
+}
+@media screen and (max-width:803px) {
+  .first,.discrption{
+    height: 25vh;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media screen and (max-width:650px) {
+  p {
+    font-size: 5vw;
   }
+  
+  h1 {
+    font-size: 10vw;
+  }
+  .App .bottom {width: 80vw;;}
+
 }
