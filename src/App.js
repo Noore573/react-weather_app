@@ -4,11 +4,10 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 function App() {
-  // const weatherapi = "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=bd5e378503939ddaee76f12ad7a97608"
   const [data, setData] = useState({})
   const [location, setLocation] = useState('')
   const [error, setError] = useState(null); 
-  const Apikey = "bd5e378503939ddaee76f12ad7a97608"
+  const Apikey = "Enter your apu key"
   const weatherapi = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${Apikey}`
 
   const SearchLocation = (event) => {
